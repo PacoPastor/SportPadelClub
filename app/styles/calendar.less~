@@ -1,0 +1,8 @@
+.box-calendar{
+    border:1px solid #afcde3;
+    height: 500px;
+    overflow:hidden;
+    padding:20px;
+    -webkit-border-radius: 10px;
+        border-radius: 10px;
+}

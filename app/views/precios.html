@@ -1,0 +1,26 @@
+<div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-10">
+                    <!--<hr class="section-heading-spacer">-->
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Ofertas disponibles:</h2>
+                   <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Material</th>
+                            <th>Duración</th>
+                            <th>Precio</th>
+                          </tr>
+                        </thead>
+        <tbody>
+          <tr ng-repeat="precio in precios" class="success">
+                <td>{{precio.nombre}}</td>
+                <td>{{precio.duracion}}</td>
+                <td>{{precio.coste}}</td>
+          </tr>
+        </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="contvideogaleria"> 
+            <h2 class="section-heading">Videos padeleros</h2>
+            <p class="lead">¡Aquí podrás ver videos de los buenos padeleros!</p>
+		<div id="videogaleria">
+			
+		</div> 
+		<div class="contvideogaleriaimg">
+            <a ng-repeat="video in videoso" ng-href="{{video.video}}" onclick="return cambiarvideo(this.href)" title="Video">
+              <img ng-src={{video.imagen}} />
+            </a>
+	</div>
+</div>
+
+<script type="text/javascript">  
+	function cambiarvideo( url ){
+	 document.getElementById('videogaleria').innerHTML = '<object width="425" height="366"><param name="movie" value="' + url + '?fs=1&amp;hl=es_ES&amp;rel=0&amp;autoplay=1"/><param value="true" name="allowFullScreen"/><param value="always" name="allowscriptaccess"/><param value="transparent" name="wmode"/><embed width="425" height="366" wmode="transparent" allowfullscreen="true" allowscriptaccess="always" type="application/x-shockwave-flash" src="' + url + '?fs=1&amp;hl=es_ES&amp;rel=0&amp;autoplay=1"/></object>';
+	  return false; 
+	} 
+</script>

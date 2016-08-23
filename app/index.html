@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sport Padel Club</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/ngGallery/src/css/ngGallery.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link href="styles/landing-page.css" rel="stylesheet">
+    <link href="styles/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/calendar.css" /> 
+    <link rel="stylesheet" type="text/css" href="styles/videos.css" />   
+    <link rel="stylesheet" type="text/css" href="styles/ubicacion.css" />
+    <!-- endbuild -->
+  </head>
+  <body data-ng-controller="NavCtrl" data-ng-app="iissApp" style="padding-top:50px">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">Le avisamos que su navegador esta bastante pasado de moda. Le recomendamos que se baje uno más moderno,
+      seguro que lo agradecerá</p>
+    <![endif]-->
+
+    <!-- BARRA DE NAVEGACION -->
+   <nav class="navbar navbar-default navbar-fixed-top topnav">
+      <div class="container topnav">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" data-ng-click="setTab(0);" href="#/">Sport Padel Club</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="page-scroll" href="#/" style="display:none"></a>
+          </li>
+          <li data-ng-class="{active: isTab(1)}" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              INFORMACIÓN <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">   
+              <li>
+                <a class="page-scroll" data-ng-click="setTab(1);" href="#actividades">Actividades</a>
+              </li>
+              <li>
+                <a class="page-scroll" data-ng-click="setTab(1);" href="#galeria">Galería</a>
+              </li>
+              <li>
+                <a class="page-scroll" data-ng-click="setTab(1);" href="#videos">Videos</a>
+              </li>
+            </ul>
+          </li>
+          <li data-ng-class="{active: isTab(2)}">
+            <a class="page-scroll" data-ng-click="setTab(2);" href="#anuncios">Anuncios</a>
+          </li>
+          <li data-ng-class="{active: isTab(3)}">
+            <a class="page-scroll" data-ng-click="setTab(3);" href="#ubicacion">Ubicación</a>
+          </li>
+          <li data-ng-class="{active: isTab(4)}">
+            <a class="page-scroll" data-ng-click="setTab(4);" href="#precios">Precios</a>
+          </li>
+          <li data-ng-class="{active: isTab(5)}">
+            <a class="page-scroll" data-ng-click="setTab(5);" href="#contacto">Contacto</a>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Fin BARRA_NAVEGACION -->
+    <!-- INYECCION_DE_VISTAS -->
+    <div class="container-fluid">
+      <div data-ng-view data-autoscroll=""></div>
+    </div>
+    <!-- Fin INYECCION_DE_VISTAS -->
+    <!--FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a data-ng-click="setTab(0);" href="#/"><h4>Sport Padel Club</h4></a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li class="dropup">
+                          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            INFORMACIÓN <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu" role="menu">   
+                            <li>
+                              <a data-ng-click="setTab(1);" href="#actividades">Actividades</a>
+                            </li>
+                            <li>
+                              <a data-ng-click="setTab(1);" href="#galeria">Galería</a>
+                            </li>
+                            <li>
+                              <a data-ng-click="setTab(1);" href="#videos">Videos</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                          <a data-ng-click="setTab(2);" href="#anuncios">Anuncios</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                          <a data-ng-click="setTab(3);" href="#ubicacion">Ubicación</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                          <a data-ng-click="setTab(4);" href="#precios">Precios</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                          <a data-ng-click="setTab(5);" href="#contacto">Contacto</a>
+                        </li> 
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Sport Padel Club 2016. Todos los derechos reservados</p>
+                    <br>
+                     <p>
+                      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                          <img style="border:0;width:88px;height:31px"
+                              src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                              alt="¡CSS Válido!" />
+                          </a>
+                          <img style="border:0;width:88px;height:31px"
+                              src="images/valid-html5.png"
+                              alt="¡CSS Válido!" />
+                          </a>
+                      </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+	<!-- Fin FOOTER -->
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/ngGallery/src/js/ngGallery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/angular-mongolab.js"></script>
+        <script src="scripts/database.js"></script>
+        <script src="scripts/controllers/video.js"></script>
+        <script src="scripts/controllers/gallery.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
+        <script src="scripts/controllers/price.js"></script>
+        <script src="scripts/controllers/notify.js"></script>
+
+        <!-- endbuild -->
+</body>
+</html>

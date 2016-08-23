@@ -1,0 +1,17 @@
+.map {
+  width: 60%;
+  margin-top: 10px;
+}
+.box {
+  border: 1px solid #afcde3;
+  overflow: hidden;
+  padding: 20px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+@media (min-width: 567px) {
+  .box {
+    height: 500px;
+  }
+
+}

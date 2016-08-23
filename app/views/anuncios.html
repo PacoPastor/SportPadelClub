@@ -1,0 +1,27 @@
+<div class="container" ng-show="verAnuncios">
+ <h1>Anuncios disponibles</h1>
+ <p>Por favor, sed buena gente y borrad los anuncios pasados de fecha</p>
+ <button class="btn btn-primary" ng-click="mostrarCreacion()">Crear un anuncio nuevo</button>
+  <div class="recuadro" ng-repeat="anuncio in anuncios">
+    <p>Nombre: {{anuncio.nombre}}</p>
+    <p>Teléfono: {{anuncio.telefono}}</p>
+    <p>Fecha: {{anuncio.fecha | date : 'dd/MM/yy'}}</p>
+    <p>Hora: {{anuncio.hora | date: 'HH:mm'}}</p>
+    <p>Nivel: {{anuncio.nivel}}</p>
+    <p>Comentario: {{anuncio.comentario}}</p>
+    <button class="btn btn-danger" ng-click="borrarAnuncio(anuncio._id.$oid)">Borrar Anuncio</button>
+  </div>
+</div>
+<div class="container" ng-show="!verAnuncios">
+ <button class="btn btn-primary" ng-click="mostrarAnuncios()">Mostrar los anuncios</button>
+  <form name="nuevoAnuncio" role="form" class="form-signin" ng-submit="nuevoAnuncio.$valid && anadirAnuncio()" novalidate>
+    <h2 class="form-signin-heading">Nuevo Anuncio</h2>
+    <input class="form-control" placeholder="Nombre" type="text" ng-model="nuevo.nombre" required><br>
+    <input class="form-control" placeholder="Teléfono" type="text" ng-model="nuevo.telefono" ng-minlength=9 ng-maxlength=9 required><br>
+    <input class="form-control" placeholder="Fecha" type="date" ng-model="nuevo.fecha" required><br>
+    <input class="form-control" placeholder="Hora" type="time" ng-model="nuevo.hora" required><br>
+    <input class="form-control" placeholder="Nivel" type="text" ng-model="nuevo.nivel" required><br>
+    <textarea class="form-control" placeholder="Escribe un comentario..." ng-model="nuevo.comentario" rows=3></textarea><br>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" ng-class="{disabled:!nuevoAnuncio.$valid}">Añade el anuncio</button>
+  </form>
+</div>

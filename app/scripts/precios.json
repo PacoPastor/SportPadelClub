@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Alquiler Pista de Lunes a Viernes en horario de mañana (9h a 14h)",
+    "duracion": "1.5 Hora",
+    "coste": "2.5€/persona"
+  },
+  {
+    "nombre": "Alquiler Pista de Lunes a Viernes en horario de tarde (16h a 24h)",
+    "duracion": "1.5 Hora",
+    "coste": "3.5€/persona"
+  },
+  {
+    "nombre": "Alquiler Pista de fin de semana en horario de mañana (9h a 14h)",
+    "duracion": "1.5 Hora",
+    "coste": "3€/persona"
+  },
+  {
+    "nombre": "Alquiler Pista de fin de semana en horario de tarde (16h a 24h)",
+    "duracion": "1.5 Hora",
+    "coste": "4€/persona"
+  }
+]

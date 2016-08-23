@@ -1,0 +1,24 @@
+.contvideogaleria img{
+	width:100px;
+	height:70px;
+	padding:5px;
+	border:1px solid #fff
+} 
+.contvideogaleria{
+	position:relative;
+	width:100%;
+	float:left;
+	background:black url(http://1.bp.blogspot.com/_WvACVGW1i[....]AABtY/QRDdhZwVuUk/s1600/youtube.png) no-repeat center left;
+} 
+.contvideogaleria .contvideogaleriaimg{
+	margin:20px;
+	margin-left:30px;
+	/margin-left:20px;
+	margin- right:5px
+	} 
+.contvideogaleria #videogaleria{
+	float:right;
+	margin-right:20px;
+	margin-top:15px;
+	background:red url(http://4.bp.blogspot.com/_lMNoba63R[....]b1hVltw/s1600/video-galeria-vku.png) no-repeat center ;
+}

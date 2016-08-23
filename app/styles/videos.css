@@ -1,0 +1,32 @@
+.contvideogaleria img{
+	width:99px;
+	height:70px;
+	padding:4px;
+    -webkit-border-radius: 10px;
+        border-radius: 10px;
+    @media (min-width: 567px) {
+      height: 500px;
+  }
+} 
+.contvideogaleria{
+	position:relative;
+	width:100%;
+	float:left;
+} 
+.contvideogaleria .contvideogaleriaimg{
+	position:center;
+	margin:32px;
+	margin-left:10px;
+	margin-right:10px;
+	border:1px solid #afcde3;
+    overflow:hidden;
+    padding: 8px;
+    -webkit-border-radius: 10px;
+        border-radius: 10px;
+	} 
+.contvideogaleria #videogaleria{
+	float:right;
+	margin:25px;
+	margin-right:20px;
+	margin-top:15px;
+}
